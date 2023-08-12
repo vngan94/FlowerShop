@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean class="com.tttn.api.ApplicationService" init-method="startup"
+		  destroy-method="shutdown" name="AppService">
+			<property name="handlers">
+				<map>
+					<entry key="v1/GetDemo">
+						<bean class="com.tttn.api.handlers.GetDemoHandler" />
+					</entry>
+					<entry key="v1/GetAllRole">
+						<bean class="com.tttn.api.handlers.read.GetAllRoleHandler" />
+					</entry>
+					<entry key="v1/PostAccount">
+						<bean class="com.tttn.api.handlers.write.PostAccountHandler" />
+					</entry>
+					<entry key="v1/GetAllColor">
+						<bean class="com.tttn.api.handlers.read.GetAllColorHandler" />
+					</entry>
+					<entry key="v1/GetAllCategory">
+						<bean class="com.tttn.api.handlers.read.GetAllCategoryHandler" />
+					</entry>
+					<entry key="v1/PostFlower">
+						<bean class="com.tttn.api.handlers.write.PostFlowerHandler" />
+					</entry>
+					<entry key="v1/UpdateFlower">
+						<bean class="com.tttn.api.handlers.write.UpdateFlowerHandler" />
+					</entry>
+					<entry key="v1/BlockAndUnblockFlower">
+						<bean class="com.tttn.api.handlers.write.BlockAndUnblockHandler" />
+					</entry>
+
+					<entry key="v1/GetAllFlower">
+						<bean class="com.tttn.api.handlers.read.GetAllFlowerHandler" />
+					</entry>
+					<entry key="v1/GetFlowerById">
+						<bean class="com.tttn.api.handlers.read.GetFlowerByIdHandler" />
+					</entry>
+					<entry key="v1/GetListFlowerByKey">
+						<bean class="com.tttn.api.handlers.read.GetListFlowerByKeyHandler" />
+					</entry>
+					<entry key="v1/AddStorage">
+						<bean class="com.tttn.api.handlers.write.PostStorageHandler" />
+					</entry>
+					<entry key="v1/AddStorage_CancelOrder">
+						<bean class="com.tttn.api.handlers.write.AddStorage_CancelOrderHandler" />
+					</entry>
+					<entry key="v1/test">
+						<bean class="com.tttn.api.handlers.write.AddStorage_CancelOrderHandler" />
+					</entry>
+					<entry key="v1/GetStorageByFlower">
+						<bean class="com.tttn.api.handlers.read.GetStorageByFlowerHandler" />
+					</entry>
+
+				</map>
+			</property>
+	</bean>
+</beans>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean class="com.tttn.api.ApplicationService" init-method="startup"
+		  destroy-method="shutdown" name="AppService">
+			<property name="handlers">
+				<map>
+					<entry key="v1/GetDemo">
+						<bean class="com.tttn.api.handlers.GetDemoHandler" />
+					</entry>
+					<entry key="v1/GetAllRole">
+						<bean class="com.tttn.api.handlers.read.GetAllRoleHandler" />
+					</entry>
+					<entry key="v1/PostAccount">
+						<bean class="com.tttn.api.handlers.write.PostAccountHandler" />
+					</entry>
+					<entry key="v1/CheckLogin">
+						<bean class="com.tttn.api.handlers.read.CheckLoginHandler" />
+					</entry>
+					<entry key="v1/GetUserByKey">
+						<bean class="com.tttn.api.handlers.read.GetUserByKeyHandler" />
+					</entry>
+					<entry key="v1/UpdateAccount">
+						<bean class="com.tttn.api.handlers.write.UpdateAccountHandler" />
+					</entry>
+					<entry key="v1/GetCartsByUserId">
+						<bean class="com.tttn.api.handlers.read.GetCartsByUserIdHandler" />
+					</entry>
+					<entry key="v1/GetCartByUserFlo">
+						<bean class="com.tttn.api.handlers.read.GetCartByUserFloHandler" />
+					</entry>
+					<entry key="v1/GetCartById">
+						<bean class="com.tttn.api.handlers.read.GetCartByIdHandler" />
+					</entry>
+					<entry key="v1/CreateCart">
+						<bean class="com.tttn.api.handlers.write.PostCartHandler" />
+					</entry>
+					<entry key="v1/UpdateCart">
+						<bean class="com.tttn.api.handlers.write.UpdateCartHandler" />
+					</entry>
+					<entry key="v1/PostTransaction">
+						<bean class="com.tttn.api.handlers.write.PostTransactionHandler" />
+					</entry>
+					<entry key="v1/GetAllTransaction">
+						<bean class="com.tttn.api.handlers.read.GetAllTransactionHandler" />
+					</entry>
+					<entry key="v1/AcceptTransaction">
+						<bean class="com.tttn.api.handlers.write.AcceptTransactionHandler" />
+					</entry>
+					<entry key="v1/CancelTransaction">
+						<bean class="com.tttn.api.handlers.write.CancelTransactionHandler" />
+					</entry>
+					<entry key="v1/GetTransactionById">
+						<bean class="com.tttn.api.handlers.read.GetTransactionByIdHandler" />
+					</entry>
+
+					<entry key="v1/GetOrderByIdTrans">
+						<bean class="com.tttn.api.handlers.read.GetOrderByIdTransHandler" />
+					</entry>
+					<entry key="v1/PostOrder">
+						<bean class="com.tttn.api.handlers.write.PostOrderHandler" />
+					</entry>
+					<entry key="v1/GetAllTransByDate">
+						<bean class="com.tttn.api.handlers.read.GetAllTransByDateHandler" />
+					</entry>
+					<entry key="v1/GetAllOrderReport">
+						<bean class="com.tttn.api.handlers.read.GetAllOrderByIdTransReportHandler" />
+					</entry>
+
+
+				</map>
+			</property>
+	</bean>
+</beans>
