@@ -6,7 +6,7 @@
  + ProductService: business about Product and Storage
  + PaymentService: business about Payment (payment type, loyal point, gift voucher)
 # Features:
-* Customer: Login, Register, Forget Password, Place Order(From ShopCart), Payment(Apply loyal point, gift voucher, payment type), Manage Order(View status)
+* Customer: Login, Register, Forget Password, Place Order(From ShopCart), Payment(Apply loyal point, gift voucher, payment type), Manage Order(View status, export invoice)
 * Admin: Login, Manage Flower(CRUD, Search), Manage Order(Accept, Cancel, Search), Report (Sales of each flower and total Revenue by Date)
 
 Video demo:
